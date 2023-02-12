@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="https://www.pokemonpets.com" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="https://www.pokemonpets.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.pokemonpets.com">
+      <s:element name="GetRegisteredMembersCount">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRegisteredMembersCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegisteredMembersCountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListPokemonName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListPokemonNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompletionListPokemonNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCompletionListAttackName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListAttackNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompletionListAttackNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompletionListUserNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListItemName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListItemNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompletionListItemNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListRouteName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompletionListRouteNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompletionListRouteNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserProfileDisplayOnOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srParam" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserProfileDisplayOnOffResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetMonsterDetailsSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srSessionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMonsterDetailsSessionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetMusicOpenOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMusicOpenOffResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="returnEnemyPlayerLastMoveTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="returnEnemyPlayerLastMoveTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="returnEnemyPlayerLastMoveTimeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="returnLatestTurnCount">
+        <s:complexType />
+      </s:element>
+      <s:element name="returnLatestTurnCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="returnLatestTurnCountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="returnPageRefresh">
+        <s:complexType />
+      </s:element>
+      <s:element name="returnPageRefreshResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="returnPageRefreshResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFrame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFrameResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="setNewMove">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="panelId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uniquePokemonId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="replaceMove" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newMove" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setNewMoveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setNewMoveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkPvPBattleRedirect">
+        <s:complexType />
+      </s:element>
+      <s:element name="checkPvPBattleRedirectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkPvPBattleRedirectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkChatAlert">
+        <s:complexType />
+      </s:element>
+      <s:element name="checkChatAlertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkChatAlertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAutoBattleResultOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srLang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAutoBattleResultOffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAutoBattleResultOffResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeQuickTeamName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srOrgTeamName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srNewTeamName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srLang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeQuickTeamNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeQuickTeamNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DisablePvPAlert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srBattleId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisablePvPAlertResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckForcedRefresh">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckForcedRefreshResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckForcedRefreshResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRegisteredMembersCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegisteredMembersCount" />
+  </wsdl:message>
+  <wsdl:message name="GetRegisteredMembersCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegisteredMembersCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListPokemonNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompletionListPokemonName" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListPokemonNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompletionListPokemonNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListAttackNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompletionListAttackName" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListAttackNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompletionListAttackNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompletionListUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompletionListUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListItemNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompletionListItemName" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListItemNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompletionListItemNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListRouteNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompletionListRouteName" />
+  </wsdl:message>
+  <wsdl:message name="GetCompletionListRouteNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompletionListRouteNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserProfileDisplayOnOffSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserProfileDisplayOnOff" />
+  </wsdl:message>
+  <wsdl:message name="SetUserProfileDisplayOnOffSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserProfileDisplayOnOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMonsterDetailsSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMonsterDetailsSession" />
+  </wsdl:message>
+  <wsdl:message name="SetMonsterDetailsSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMonsterDetailsSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMusicOpenOffSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMusicOpenOff" />
+  </wsdl:message>
+  <wsdl:message name="SetMusicOpenOffSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMusicOpenOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="returnEnemyPlayerLastMoveTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:returnEnemyPlayerLastMoveTime" />
+  </wsdl:message>
+  <wsdl:message name="returnEnemyPlayerLastMoveTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:returnEnemyPlayerLastMoveTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="returnLatestTurnCountSoapIn">
+    <wsdl:part name="parameters" element="tns:returnLatestTurnCount" />
+  </wsdl:message>
+  <wsdl:message name="returnLatestTurnCountSoapOut">
+    <wsdl:part name="parameters" element="tns:returnLatestTurnCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="returnPageRefreshSoapIn">
+    <wsdl:part name="parameters" element="tns:returnPageRefresh" />
+  </wsdl:message>
+  <wsdl:message name="returnPageRefreshSoapOut">
+    <wsdl:part name="parameters" element="tns:returnPageRefreshResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetFrameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetFrame" />
+  </wsdl:message>
+  <wsdl:message name="SetFrameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetFrameResponse" />
+  </wsdl:message>
+  <wsdl:message name="setNewMoveSoapIn">
+    <wsdl:part name="parameters" element="tns:setNewMove" />
+  </wsdl:message>
+  <wsdl:message name="setNewMoveSoapOut">
+    <wsdl:part name="parameters" element="tns:setNewMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkPvPBattleRedirectSoapIn">
+    <wsdl:part name="parameters" element="tns:checkPvPBattleRedirect" />
+  </wsdl:message>
+  <wsdl:message name="checkPvPBattleRedirectSoapOut">
+    <wsdl:part name="parameters" element="tns:checkPvPBattleRedirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkChatAlertSoapIn">
+    <wsdl:part name="parameters" element="tns:checkChatAlert" />
+  </wsdl:message>
+  <wsdl:message name="checkChatAlertSoapOut">
+    <wsdl:part name="parameters" element="tns:checkChatAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAutoBattleResultOffSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAutoBattleResultOff" />
+  </wsdl:message>
+  <wsdl:message name="SetAutoBattleResultOffSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAutoBattleResultOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeQuickTeamNameSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeQuickTeamName" />
+  </wsdl:message>
+  <wsdl:message name="ChangeQuickTeamNameSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeQuickTeamNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMobile" />
+  </wsdl:message>
+  <wsdl:message name="SetMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisablePvPAlertSoapIn">
+    <wsdl:part name="parameters" element="tns:DisablePvPAlert" />
+  </wsdl:message>
+  <wsdl:message name="DisablePvPAlertSoapOut">
+    <wsdl:part name="parameters" element="tns:DisablePvPAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckForcedRefreshSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckForcedRefresh" />
+  </wsdl:message>
+  <wsdl:message name="CheckForcedRefreshSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckForcedRefreshResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AutoCompletePokemonNameSoap">
+    <wsdl:operation name="GetRegisteredMembersCount">
+      <wsdl:input message="tns:GetRegisteredMembersCountSoapIn" />
+      <wsdl:output message="tns:GetRegisteredMembersCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListPokemonName">
+      <wsdl:input message="tns:GetCompletionListPokemonNameSoapIn" />
+      <wsdl:output message="tns:GetCompletionListPokemonNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListAttackName">
+      <wsdl:input message="tns:GetCompletionListAttackNameSoapIn" />
+      <wsdl:output message="tns:GetCompletionListAttackNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameSoapIn" />
+      <wsdl:output message="tns:GetUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListUserName">
+      <wsdl:input message="tns:GetCompletionListUserNameSoapIn" />
+      <wsdl:output message="tns:GetCompletionListUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListItemName">
+      <wsdl:input message="tns:GetCompletionListItemNameSoapIn" />
+      <wsdl:output message="tns:GetCompletionListItemNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListRouteName">
+      <wsdl:input message="tns:GetCompletionListRouteNameSoapIn" />
+      <wsdl:output message="tns:GetCompletionListRouteNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserProfileDisplayOnOff">
+      <wsdl:input message="tns:SetUserProfileDisplayOnOffSoapIn" />
+      <wsdl:output message="tns:SetUserProfileDisplayOnOffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMonsterDetailsSession">
+      <wsdl:input message="tns:SetMonsterDetailsSessionSoapIn" />
+      <wsdl:output message="tns:SetMonsterDetailsSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMusicOpenOff">
+      <wsdl:input message="tns:SetMusicOpenOffSoapIn" />
+      <wsdl:output message="tns:SetMusicOpenOffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="returnEnemyPlayerLastMoveTime">
+      <wsdl:input message="tns:returnEnemyPlayerLastMoveTimeSoapIn" />
+      <wsdl:output message="tns:returnEnemyPlayerLastMoveTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="returnLatestTurnCount">
+      <wsdl:input message="tns:returnLatestTurnCountSoapIn" />
+      <wsdl:output message="tns:returnLatestTurnCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="returnPageRefresh">
+      <wsdl:input message="tns:returnPageRefreshSoapIn" />
+      <wsdl:output message="tns:returnPageRefreshSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFrame">
+      <wsdl:input message="tns:SetFrameSoapIn" />
+      <wsdl:output message="tns:SetFrameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setNewMove">
+      <wsdl:input message="tns:setNewMoveSoapIn" />
+      <wsdl:output message="tns:setNewMoveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkPvPBattleRedirect">
+      <wsdl:input message="tns:checkPvPBattleRedirectSoapIn" />
+      <wsdl:output message="tns:checkPvPBattleRedirectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkChatAlert">
+      <wsdl:input message="tns:checkChatAlertSoapIn" />
+      <wsdl:output message="tns:checkChatAlertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAutoBattleResultOff">
+      <wsdl:input message="tns:SetAutoBattleResultOffSoapIn" />
+      <wsdl:output message="tns:SetAutoBattleResultOffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeQuickTeamName">
+      <wsdl:input message="tns:ChangeQuickTeamNameSoapIn" />
+      <wsdl:output message="tns:ChangeQuickTeamNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMobile">
+      <wsdl:input message="tns:SetMobileSoapIn" />
+      <wsdl:output message="tns:SetMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisablePvPAlert">
+      <wsdl:input message="tns:DisablePvPAlertSoapIn" />
+      <wsdl:output message="tns:DisablePvPAlertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckForcedRefresh">
+      <wsdl:input message="tns:CheckForcedRefreshSoapIn" />
+      <wsdl:output message="tns:CheckForcedRefreshSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AutoCompletePokemonNameSoap" type="tns:AutoCompletePokemonNameSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRegisteredMembersCount">
+      <soap:operation soapAction="https://www.pokemonpets.com/GetRegisteredMembersCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListPokemonName">
+      <soap:operation soapAction="https://www.pokemonpets.com/GetCompletionListPokemonName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListAttackName">
+      <soap:operation soapAction="https://www.pokemonpets.com/GetCompletionListAttackName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="https://www.pokemonpets.com/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListUserName">
+      <soap:operation soapAction="https://www.pokemonpets.com/GetCompletionListUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListItemName">
+      <soap:operation soapAction="https://www.pokemonpets.com/GetCompletionListItemName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListRouteName">
+      <soap:operation soapAction="https://www.pokemonpets.com/GetCompletionListRouteName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserProfileDisplayOnOff">
+      <soap:operation soapAction="https://www.pokemonpets.com/SetUserProfileDisplayOnOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMonsterDetailsSession">
+      <soap:operation soapAction="https://www.pokemonpets.com/SetMonsterDetailsSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMusicOpenOff">
+      <soap:operation soapAction="https://www.pokemonpets.com/SetMusicOpenOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnEnemyPlayerLastMoveTime">
+      <soap:operation soapAction="https://www.pokemonpets.com/returnEnemyPlayerLastMoveTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnLatestTurnCount">
+      <soap:operation soapAction="https://www.pokemonpets.com/returnLatestTurnCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnPageRefresh">
+      <soap:operation soapAction="https://www.pokemonpets.com/returnPageRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFrame">
+      <soap:operation soapAction="https://www.pokemonpets.com/SetFrame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNewMove">
+      <soap:operation soapAction="https://www.pokemonpets.com/setNewMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPvPBattleRedirect">
+      <soap:operation soapAction="https://www.pokemonpets.com/checkPvPBattleRedirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChatAlert">
+      <soap:operation soapAction="https://www.pokemonpets.com/checkChatAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAutoBattleResultOff">
+      <soap:operation soapAction="https://www.pokemonpets.com/SetAutoBattleResultOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeQuickTeamName">
+      <soap:operation soapAction="https://www.pokemonpets.com/ChangeQuickTeamName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMobile">
+      <soap:operation soapAction="https://www.pokemonpets.com/SetMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisablePvPAlert">
+      <soap:operation soapAction="https://www.pokemonpets.com/DisablePvPAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckForcedRefresh">
+      <soap:operation soapAction="https://www.pokemonpets.com/CheckForcedRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AutoCompletePokemonNameSoap12" type="tns:AutoCompletePokemonNameSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRegisteredMembersCount">
+      <soap12:operation soapAction="https://www.pokemonpets.com/GetRegisteredMembersCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListPokemonName">
+      <soap12:operation soapAction="https://www.pokemonpets.com/GetCompletionListPokemonName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListAttackName">
+      <soap12:operation soapAction="https://www.pokemonpets.com/GetCompletionListAttackName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap12:operation soapAction="https://www.pokemonpets.com/GetUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListUserName">
+      <soap12:operation soapAction="https://www.pokemonpets.com/GetCompletionListUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListItemName">
+      <soap12:operation soapAction="https://www.pokemonpets.com/GetCompletionListItemName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListRouteName">
+      <soap12:operation soapAction="https://www.pokemonpets.com/GetCompletionListRouteName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserProfileDisplayOnOff">
+      <soap12:operation soapAction="https://www.pokemonpets.com/SetUserProfileDisplayOnOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMonsterDetailsSession">
+      <soap12:operation soapAction="https://www.pokemonpets.com/SetMonsterDetailsSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMusicOpenOff">
+      <soap12:operation soapAction="https://www.pokemonpets.com/SetMusicOpenOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnEnemyPlayerLastMoveTime">
+      <soap12:operation soapAction="https://www.pokemonpets.com/returnEnemyPlayerLastMoveTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnLatestTurnCount">
+      <soap12:operation soapAction="https://www.pokemonpets.com/returnLatestTurnCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnPageRefresh">
+      <soap12:operation soapAction="https://www.pokemonpets.com/returnPageRefresh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFrame">
+      <soap12:operation soapAction="https://www.pokemonpets.com/SetFrame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNewMove">
+      <soap12:operation soapAction="https://www.pokemonpets.com/setNewMove" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPvPBattleRedirect">
+      <soap12:operation soapAction="https://www.pokemonpets.com/checkPvPBattleRedirect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChatAlert">
+      <soap12:operation soapAction="https://www.pokemonpets.com/checkChatAlert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAutoBattleResultOff">
+      <soap12:operation soapAction="https://www.pokemonpets.com/SetAutoBattleResultOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeQuickTeamName">
+      <soap12:operation soapAction="https://www.pokemonpets.com/ChangeQuickTeamName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMobile">
+      <soap12:operation soapAction="https://www.pokemonpets.com/SetMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisablePvPAlert">
+      <soap12:operation soapAction="https://www.pokemonpets.com/DisablePvPAlert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckForcedRefresh">
+      <soap12:operation soapAction="https://www.pokemonpets.com/CheckForcedRefresh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AutoCompletePokemonName">
+    <wsdl:port name="AutoCompletePokemonNameSoap" binding="tns:AutoCompletePokemonNameSoap">
+      <soap:address location="https://www.pokemonpets.com/AutoCompleteName.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AutoCompletePokemonNameSoap12" binding="tns:AutoCompletePokemonNameSoap12">
+      <soap12:address location="https://www.pokemonpets.com/AutoCompleteName.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
